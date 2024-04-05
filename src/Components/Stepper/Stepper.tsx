@@ -2,7 +2,7 @@ import { useState } from "react";
 
 type StepType = "start" | "midle" | "finish"
 
-type Stepp = {
+export type Stepp = {
   title: string;
   content?: string;
 };
@@ -24,7 +24,7 @@ const Stepper = ({ startStepp, midleStepp, finishStepp }: StepperProps) => {
     }
   };
 
-  const handleStepStyle = (currentStep: string) => {
+  const handleStepStyle = (currentStep: StepType) => {
     switch (currentStep) {
       case "start":
         return step === "start" ? " start-stepper " : "not-active";
