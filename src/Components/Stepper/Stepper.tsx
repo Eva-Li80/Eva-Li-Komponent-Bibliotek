@@ -2,18 +2,18 @@ import { useState } from "react";
 
 type StepType = "start" | "midle" | "finish"
 
-export type Stepp = {
+export type Step = {
   title: string;
   content?: string;
 };
 
 export type StepperProps = {
-  startStepp: Stepp;
-  midleStepp: Stepp;
-  finishStepp: Stepp;
+  startStep: Step;
+  midleStep: Step;
+  finishStep: Step;
 };
 
-const Stepper = ({ startStepp, midleStepp, finishStepp }: StepperProps) => {
+const Stepper = ({ startStep, midleStep, finishStep }: StepperProps) => {
   const [step, setStep] = useState<StepType>("start");
 
   const handleSteps = () => {
@@ -43,17 +43,17 @@ const Stepper = ({ startStepp, midleStepp, finishStepp }: StepperProps) => {
   return (
     <div className="stepper-container">
       <div className="stepper">
-        <p className="content">{startStepp.content}</p>
+        <p className="content">{startStep.content}</p>
         <div className={`all ${handleStepStyle("start")}`}>
-          <p>{startStepp.title}</p>
+          <p>{startStep.title}</p>
         </div>
-        <p className="content">{midleStepp.content}</p>
+        <p className="content">{midleStep.content}</p>
         <div className={`all ${handleStepStyle("midle")}`}>
-          <p>{midleStepp.title}</p>
+          <p>{midleStep.title}</p>
         </div>
-        <p className="content">{finishStepp.content}</p>
+        <p className="content">{finishStep.content}</p>
         <div className={`all ${handleStepStyle("finish")}`}>
-          <p>{finishStepp.title}</p>
+          <p>{finishStep.title}</p>
         </div>
       </div>
       <div className="btn-container">
