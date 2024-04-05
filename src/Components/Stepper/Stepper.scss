@@ -7,7 +7,7 @@
  
 
   .container{
-    background-color: rgb(54, 84, 140);
+    // background-color: rgb(54, 84, 140);
     border: 20px solid rgb(9, 5, 66);
     padding: 40px;
     display: flex;
@@ -26,7 +26,7 @@
     margin-bottom: 40px;
     .content {
       padding: 10px;
-      color: white;
+      color: rgb(9, 5, 66);
       margin: 0 10px;
       font-size: 20px;
     
@@ -67,7 +67,8 @@
   }
   .btn:hover {
     cursor: pointer;
-    background-color:  rgb(17, 12, 92);;
-    color: white;
+    background-color: plum;
+    border: 2px solid rgb(8, 4, 65);
+    color: rgb(8, 4, 65);
   }
 }

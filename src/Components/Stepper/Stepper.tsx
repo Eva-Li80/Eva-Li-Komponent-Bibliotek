@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-type StepType = "start" | "midle" | "finish"
+type StepType = "start" | "midle" | "finish";
 
 export type Step = {
   title: string;
@@ -42,26 +42,28 @@ const Stepper = ({ startStep, midleStep, finishStep }: StepperProps) => {
 
   return (
     <div className="stepper-container">
-      <div className="stepper">
-        <p className="content">{startStep.content}</p>
-        <div className={`all ${handleStepStyle("start")}`}>
-          <p>{startStep.title}</p>
+      <div className="container">
+        <div className="stepper">
+          <p className="content">{startStep.content}</p>
+          <div className={`all ${handleStepStyle("start")}`}>
+            <p>{startStep.title}</p>
+          </div>
+          <p className="content">{midleStep.content}</p>
+          <div className={`all ${handleStepStyle("midle")}`}>
+            <p>{midleStep.title}</p>
+          </div>
+          <p className="content">{finishStep.content}</p>
+          <div className={`all ${handleStepStyle("finish")}`}>
+            <p>{finishStep.title}</p>
+          </div>
         </div>
-        <p className="content">{midleStep.content}</p>
-        <div className={`all ${handleStepStyle("midle")}`}>
-          <p>{midleStep.title}</p>
+        <div className="btn-container">
+          {step && (
+            <button className="btn" onClick={handleSteps}>
+              Click next
+            </button>
+          )}
         </div>
-        <p className="content">{finishStep.content}</p>
-        <div className={`all ${handleStepStyle("finish")}`}>
-          <p>{finishStep.title}</p>
-        </div>
-      </div>
-      <div className="btn-container">
-        {step && (
-          <button className="btn" onClick={handleSteps}>
-            Click next
-          </button>
-        )}
       </div>
     </div>
   );
