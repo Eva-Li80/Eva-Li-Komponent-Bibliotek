@@ -1,0 +1,51 @@
+.stepper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  .stepper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    .content {
+      padding: 10px;
+    }
+
+    .all {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      border: 2px solid gray;
+    }
+
+    .start-stepper {
+      background-color: green;
+    }
+    .midle-stepper {
+      background-color: orange;
+    }
+    .finish-stepper {
+      background-color: red;
+    }
+    .not-active {
+      background-color: rgb(224, 224, 224);
+    }
+  }
+
+  .btn {
+    padding: 10px;
+    background-color: plum;
+  }
+  .btn:hover {
+    cursor: pointer;
+    background-color: purple;
+    color: white;
+  }
+}
