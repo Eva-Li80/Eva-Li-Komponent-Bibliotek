@@ -4,15 +4,32 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
+ 
 
+  .container{
+    background-color: rgb(54, 84, 140);
+    border: 20px solid rgb(9, 5, 66);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
   .stepper {
+  
+    padding: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     .content {
       padding: 10px;
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+    
     }
 
     .all {
@@ -22,14 +39,15 @@
       width: 75px;
       height: 75px;
       border-radius: 50%;
-      border: 2px solid gray;
+      border: 2px solid plum;
+ 
     }
 
     .start-stepper {
       background-color: green;
     }
     .midle-stepper {
-      background-color: orange;
+      background-color: rgb(255, 204, 0);
     }
     .finish-stepper {
       background-color: red;
@@ -41,11 +59,15 @@
 
   .btn {
     padding: 10px;
-    background-color: plum;
+    color:white;
+    margin-bottom: 50px;
+    background-color:rgb(8, 4, 65);
+    font-size: 20px;
+    border: 2px solid plum;
   }
   .btn:hover {
     cursor: pointer;
-    background-color: purple;
+    background-color:  rgb(17, 12, 92);;
     color: white;
   }
 }
