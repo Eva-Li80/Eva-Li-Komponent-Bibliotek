@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-export type Stepp = {
+type StepType = "start" | "midle" | "finish"
+
+type Stepp = {
   title: string;
   content?: string;
 };
@@ -12,7 +14,7 @@ export type StepperProps = {
 };
 
 const Stepper = ({ startStepp, midleStepp, finishStepp }: StepperProps) => {
-  const [step, setStep] = useState<"start" | "midle" | "finish">("start");
+  const [step, setStep] = useState<StepType>("start");
 
   const handleSteps = () => {
     if (step === "start") {
