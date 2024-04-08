@@ -4,10 +4,8 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
- 
 
-  .container{
-    // background-color: rgb(54, 84, 140);
+  .container {
     border: 20px solid rgb(9, 5, 66);
     padding: 40px;
     display: flex;
@@ -15,21 +13,20 @@
     align-items: center;
     flex-direction: column;
   }
-  
+
   .stepper {
-  
     padding: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+
     .content {
       padding: 10px;
       color: rgb(9, 5, 66);
       margin: 0 10px;
       font-size: 20px;
-    
     }
 
     .all {
@@ -39,29 +36,36 @@
       width: 75px;
       height: 75px;
       border-radius: 50%;
-      border: 2px solid plum;
- 
+      border: 2px solid rgb(224, 224, 224); 
     }
 
     .start-stepper {
       background-color: green;
+      
     }
     .midle-stepper {
       background-color: rgb(255, 204, 0);
+      
     }
     .finish-stepper {
       background-color: red;
+    
+    }
+
+    .active {
+      animation: borderAnimation 1s;
     }
     .not-active {
       background-color: rgb(224, 224, 224);
+    
     }
   }
 
   .btn {
     padding: 10px;
-    color:white;
+    color: white;
     margin-bottom: 50px;
-    background-color:rgb(8, 4, 65);
+    background-color: rgb(8, 4, 65);
     font-size: 20px;
     border: 2px solid plum;
   }
@@ -70,5 +74,34 @@
     background-color: plum;
     border: 2px solid rgb(8, 4, 65);
     color: rgb(8, 4, 65);
+    // animation: namn 3s;
+  }
+}
+
+@keyframes borderAnimation {
+  100%{
+    border-width: 2px;
+  }
+  75% {
+    border-width: 4px;
+  }
+  50% {
+    border-width: 6px;
+  }
+  25%{
+    border-width: 8px;
+  }
+  0%{
+    border-width: 10px;
+  }
+ 
+}
+
+@keyframes namn {
+  0% {
+    padding: 0;
+  }
+  50% {
+    padding: 20%;
   }
 }

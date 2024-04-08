@@ -27,13 +27,13 @@ const Stepper = ({ startStep, midleStep, finishStep }: StepperProps) => {
   const handleStepStyle = (currentStep: StepType) => {
     switch (currentStep) {
       case "start":
-        return step === "start" ? " start-stepper " : "not-active";
+        return step === "start" ? " start-stepper active " : "not-active";
 
       case "midle":
-        return step === "midle" ? " midle-stepper " : "not-active";
+        return step === "midle" ? " midle-stepper active " : "not-active";
 
       case "finish":
-        return step === "finish" ? " finish-stepper " : "not-active";
+        return step === "finish" ? " finish-stepper active " : "not-active";
 
       default:
         return "";
