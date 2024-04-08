@@ -1,30 +1,21 @@
 .stepper-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flexDirection(column);
   height: 100vh;
 
   .container {
-    border: 20px solid rgb(9, 5, 66);
+    border: 20px solid $color-blue;
     padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include flexDirection(column);
   }
 
   .stepper {
     padding: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include flexDirection(row);
     margin-bottom: 40px;
 
     .content {
       padding: 10px;
-      color: rgb(9, 5, 66);
+      color: $color-blue;
       margin: 0 10px;
       font-size: 20px;
     }
@@ -36,50 +27,46 @@
       width: 75px;
       height: 75px;
       border-radius: 50%;
-      border: 2px solid rgb(224, 224, 224); 
+      border: 2px solid $color-gray-light;
     }
 
     .start-stepper {
-      background-color: green;
-      
+      background-color: $color-green;
     }
     .midle-stepper {
-      background-color: rgb(255, 204, 0);
-      
+      background-color: $color-yellow;
     }
     .finish-stepper {
-      background-color: red;
-    
+      background-color: $color-red;
     }
 
     .active {
       animation: borderAnimation 1s;
     }
     .not-active {
-      background-color: rgb(224, 224, 224);
-    
+      background-color: $color-gray-light;
     }
   }
 
   .btn {
     padding: 10px;
-    color: white;
+    color: $color-white;
     margin-bottom: 50px;
-    background-color: rgb(8, 4, 65);
+    background-color: $color-blue;
     font-size: 20px;
-    border: 2px solid plum;
+    border: 2px solid $color-plum;
   }
   .btn:hover {
     cursor: pointer;
-    background-color: plum;
-    border: 2px solid rgb(8, 4, 65);
-    color: rgb(8, 4, 65);
+    background-color: $color-plum;
+    border: 2px solid $color-blue;
+    color: $color-blue;
     // animation: namn 3s;
   }
 }
 
 @keyframes borderAnimation {
-  100%{
+  100% {
     border-width: 2px;
   }
   75% {
@@ -88,13 +75,12 @@
   50% {
     border-width: 6px;
   }
-  25%{
+  25% {
     border-width: 8px;
   }
-  0%{
+  0% {
     border-width: 10px;
   }
- 
 }
 
 @keyframes namn {
